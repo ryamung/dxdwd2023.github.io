@@ -1,154 +1,225 @@
-@font-face {
-    font-family: "BMJUA-Regular";
-    src: url("fonts/BMJUA.otf") format("opentype");
+﻿@font-face {
+    font-family: "Kostar";
+    src: url("fonts/Kostar.ttf") format('opentype');
 }
 
-#header {
-    font-family: BMJUA-Regular;
-    color: white;
-    position: relative;
+/* font setting */
+html {
+    background-color: #bae2a8;
+    scroll-behavior: smooth; /* 스크롤 시 부드럽게 이동 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kostar";
+}
+
+/* <----------Heder Setting----------> */
+#Header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    background-color: rgba(130,150,202,1);
+    height: 80px;
+    background-color: #8eb287;
     z-index: 10000;
 }
-#logo {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    font-family: 'BMJUA-Regular';
-    font-size: 36px;
-}
-#navmenu {
+
+#NavMenu {
     display: flex;
     position: absolute;
     bottom: 16px;
-    right: 16px;
+    right: 20px;
     padding-right: 10px;
 }
-#navmenu p {
-    margin: 0 10px;
-}
-#navmenu a {
-    color: white;
-}
-#navmenu a:link {
-    text-decoration: none;
-}
-#navmenu a:hover {
-    text-decoration: underline;
-    color: blueviolet;
-}
-.body {
-    font-family: BMJUA-Regula;
-    font-size: 14px;
-}
-.Main_Container {
-    width: 100%;
-    height: 1080px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-}
-.NotThing {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 1920px;
-    height: 1080px;
-    /*background: rgba(180,248,236,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
 
+#LogoImg {
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
-.Image_1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    flex-basis: 300px;
-    width: 300px;
-    height: 300px;
-    /*background: rgba(41,172,213,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 15%;
-    left: 60%;
-    overflow: hidden;
+
+#MbtiIconImg {
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.Image_2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    flex-basis: 300px;
-    width: 300px;
-    height: 300px;
-    /*background: rgba(174,81,207,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 35%;
-    left: 80%;
-    overflow: hidden;
+
+#FriendImg img {
+    width: 100%;
 }
-.Image_3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    flex-basis: 300px;
-    width: 300px;
-    height: 300px;
-    /*background: rgba(52,177,139,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 65%;
-    left: 70%;
-    overflow: hidden;
+
+#WorkIconImg {
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.Maintext {
-    font-family: BMJUA-Regular;
+
+#IstarIconImg {
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#NavMenu a {
+    color: #000;
+}
+
+    #NavMenu a:link {
+        text-decoration: none;
+    }
+
+#NavMenu img:hover {
+    opacity: 50%;
+}
+
+#Email {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* <----------MainContainer Setting----------> */
+#MainContainer {
+    position: relative;
+    width: 960px;
+    margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+    padding-top: 200px;
+    padding-bottom: 60px;
+}
+
+#MainText {
+    position: relative;
+    font-family: "Kostar";
     font-size: 20px;
-    margin: 20px;
-    line-height: 30px;
-    width: 50%;
-    height: 150px;
-    /*background: rgba(146,148,47,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 240px;
-    left: 100px;
-    overflow: hidden;
+    line-height: 180%;
 }
-.behind_A {
-    font-family: BMJUA-Regular;
-    font-size: 30px;
-    margin: 20px;
-    width: 50%;
-    height: 40px;
-    /*background: rgba(146,148,47,1);*/
-    opacity: 1;
-    position: absolute;
-    top: 420px;
-    left: 100px;
-    overflow: hidden;
+
+/* <----------ProjectContainer Setting----------> */
+#projects {
+    position: relative;
+    width: 100%;
+    padding-top: 160px;
 }
-.behind {
-    font-family: BMJUA-Regular;
-    font-size: 20px;
-    margin: 20px;
-    line-height: 30px;
-    width: 50%;
-    height: 150px;
-    /*background: rgba(52,177,139,1);*/
-    opacity: 1;
+
+.ProjectContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.ProjectContainer > img {
+    width: 100%;
+}
+
+.ProjectOverlay {
+    color: #000000;
     position: absolute;
-    top: 500px;
-    left: 100px;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.0;
+    display: flex;
+    flex-direction: column; /* 아이템이 세로 방향으로 쌓이는 flexbox */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s; /* css 속성값이 변하는 경우 애니메이션 처리 */
+}
+
+.ProjectOverlay:hover {
+    opacity: 0.85;
+}
+
+.ProjectTitle {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.ProjectDescription {
+    margin: 0;
+    padding: 0;
+}
+
+/* <----------Work Setting----------> */
+
+#WorkImgBox > img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#VideoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+#VideoContainer video {
+    width: 100%;
+    height: auto;
+}
+
+/* <----------Hobby Setting----------> */
+#HobbyImgBox {
+    margin-top: 100px;
+}
+
+#HobbyImgBox > img {
+    width: 100%;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ImageContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#ImageContainer img {
+    width: 50%;
+}
+
+/*미디어 쿼리(media query) - 반응형 웹 구현
+사용자 화면의 뷰포트(viewport) 크기가 1024px보다 작은 경우(최대 1024px) 적용 */
+@media screen and (max-width: 1024px) {
+    #MainContainer {
+        width: 90%;
+    }
+
+    #projects {
+        padding-top: 80px;
+    }
+
+    #Email {
+        padding-bottom: 20px; /* 아래 여백 조정 */
+    }
+
+
+    #WorkImgBox > img {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #VideoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 50px auto 0;
+    }
+
+    #HobbyImgBox > img {
+        width: 100%;
+        margin-top: 50px;
+    }
 }
