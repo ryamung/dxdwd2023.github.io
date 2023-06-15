@@ -194,6 +194,14 @@ body {
     width: 50%;
 }
 
+#TMIImgBox > img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
 /*미디어 쿼리(media query) - 반응형 웹 구현
 사용자 화면의 뷰포트(viewport) 크기가 1024px보다 작은 경우(최대 1024px) 적용 */
 @media screen and (max-width: 1024px) {
